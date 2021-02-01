@@ -10,7 +10,7 @@ function convertSeconds(s) {
 }
 
 function preload() {
-	ding = loadSound("ding.mp3");
+	ding = loadSound("https://www.googleapis.com/drive/v3/files/1Z9ZPjpxTQEBpegk5nU5lGdaNZlKTQf8K?alt=media&key=AIzaSyAzF0o5u3oAVI6udcZH-h5dJ_uwRzBmOsQ");
 }
 
 // Set value of the DOM element
@@ -48,11 +48,11 @@ function setup() {
 			// Ding spam
 			var dingcount = 0;
 			var dinginterval = setInterval(function() {
-				ding.play();
+				//ding.play();
 				dingcount++;
 				if(dingcount == 10) clearInterval(dinginterval);
 			}, 100);
-			//ding.play();
+			ding.play();
 			stopTimer();
 		}
 	}
